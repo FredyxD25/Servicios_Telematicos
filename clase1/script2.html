@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Titulo navegador</title>
+    </head>
+    <body>
+        <!-- Título principal de la página -->
+        <h1>Javascript</h1>
+        <label>Nombre:</label>
+        <input type="text" id="txtNombre" value="Juan">
+        <button onclick="saludar()">Saludar</button>
+        <label id="txtmostrar">Digite algo..</label>
+    </body>
+    <!-- Codigo javascript -->
+    <script>
+       let nombre = "Juan"; //variable local
+       var apellido = "Pérez"; //variable global  
+       
+       function saludar(){
+           let mensaje = "Hola "+nombre+" "+apellido;
+           let nombreIngresado = document.getElementById("txtNombre").value;
+           document.getElementById("txtmostrar").innerHTML = "Hola "+nombreIngresado;
+           console.log(mensaje);
+           document.getElementById("txtNombre").value = " ";
+       }
+    </script>
+    
+</html>
